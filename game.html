@@ -1,136 +1,136 @@
 <html lang="zh_cn">
-  <head>
-    <!DOCTYPE html>
-    <html lang="zh-cn">
-      <head>
-        <title>bingo</title>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
-        />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-touch-fullscreen" content="yes" />
-        <meta name="full-screen" content="yes" />
-        <link rel="stylesheet" href="./css/style.min.css" />
-      </head>
 
-      <body style="">
-        <div id="loading">
-          <div id="loading-center">
-            <div id="loading-center-absolute">
-              <div class="object" id="object_one"></div>
-              <div class="object" id="object_two"></div>
-              <div class="object" id="object_three"></div>
-              <div class="object" id="object_four"></div>
-            </div>
-          </div>
-        </div>
-        <div class="tbox" style="">
-          <div class="logocon">
-            <div class="logoimg">
-              <img src="./images/logo.png" height="40px" />
-            </div>
-            <div class="cont">
-              <p>O2O客戶服務平台（EC2）</p>
-              <p>請關注粉絲專頁 <a href="javascript">福皓整合科技</a></p>
-            </div>
-          </div>
-          <!--
+<head>
+  <!DOCTYPE html>
+  <html lang="zh-cn">
+
+  <head>
+    <title>bingo</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+<body style="">
+  <div id="loading">
+    <div id="loading-center">
+      <div id="loading-center-absolute">
+        <div class="object" id="object_one"></div>
+        <div class="object" id="object_two"></div>
+        <div class="object" id="object_three"></div>
+        <div class="object" id="object_four"></div>
+      </div>
+    </div>
+  </div>
+  <div class="tbox" style="">
+    <div class="logocon">
+      <div class="logoimg">
+        <img src="./images/logo.png" height="40px" />
+      </div>
+      <div class="cont">
+        <p>O2O客戶服務平台（EC2）</p>
+        <p>請關注粉絲專頁 <a href="javascript">福皓整合科技</a></p>
+      </div>
+    </div>
+    <!--
             <div class="sharecon">
                 <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FFull2house%2F&width=50&layout=box_count&action=like&size=large&show_faces=false&share=false&height=65&appId=382298112140973" width="50" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
           -->
-          <div class="gamecon clearfix"></div>
+    <div class="gamecon clearfix"></div>
 
-          <div class="footer"><img src="./images/banner.png" /></div>
-        </div>
-        <script src="./js/main.min.js"></script>
-        <script>
-          $(function() {
-            // 是否启用调试模式
-            var isDebug = 1;
-            // 如果启用了调试模式，则MOCK数据  Mock.mock('url',模板);
-            if (isDebug) {
-              Mock.mock("getdata", {
-                data: {
-                  numArr: [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    ,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15,
-                    22,
-                    24,
-                    26,
-                    30,
-                    16,
-                    17,
-                    18,
-                    19,
-                    20
-                  ], //开数的数组 Array
-                  isBegin: true, //游戏开始还是结束  boolean
-                  maxNum: 30, //取数范围 int
-                  "maxLine|1": [1, 2, 3], //连线的条数 int
-                  logoImg: "./images/logo.png" //logo 200*200 string
-                },
-                code: 0, //0代表成功 int
-                msg: "成功" // string
-              });
-            }
+    <div class="footer"><img src="./images/banner.png" /></div>
+  </div>
+  <script src="./js/main.min.js"></script>
+  <script>
+    $(function () {
+      // 是否启用调试模式
+      var isDebug = 1;
+      // 如果启用了调试模式，则MOCK数据  Mock.mock('url',模板);
+      if (isDebug) {
+        Mock.mock("getdata", {
+          data: {
+            numArr: [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9, ,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              22,
+              24,
+              26,
+              30,
+              16,
+              17,
+              18,
+              19,
+              20
+            ], //开数的数组 Array
+            isBegin: true, //游戏开始还是结束  boolean
+            maxNum: 30, //取数范围 int
+            "maxLine|1": [1, 2, 3], //连线的条数 int
+            logoImg: "./images/logo.png" //logo 200*200 string
+          },
+          code: 0, //0代表成功 int
+          msg: "成功" // string
+        });
+      }
 
-            var preimgs = ["./images/logo.png", "./images/banner.png"];
-            //图片预加载
-            preloadimages(preimgs).done(function(images) {
-              $("#loading").hide();
-              game.renderDom({
-                node: ".gamecon", //入口dom
-                getUrl: "getdata", //获取数字的接口
-                resClick: function(data) {
-                  //点击结束后的回调函数  @data返回成功或失败
-                  console.log(data);
-                  var html =
-                    '<p style="font-size:16px;text-align:center;">確定退出遊戲嗎？</p>';
-                  mypop("提示", html, function(obj) {
-                    obj.attr("disabled", true);
-                    $.ajax({
-                      type: "post",
-                      data: data,
-                      url: "getdata",
-                      dataType: "json",
-                      success: function(res) {
-                        obj.removeAttr("disabled");
-                        if (res.code == 0) {
-                          obj.parents(".ec_pop").hide();
-                          $(".pop_box").removeClass("animation-dialogue-in");
-                          $("body,html").removeClass("forbid-scroll");
-                          window.location.href = "http://www.baidu.com";
-                        } else {
-                          alert(res.msg);
-                        }
-                      }
-                    });
-                  });
+      var preimgs = ["./images/logo.png", "./images/banner.png"];
+      //图片预加载
+      preloadimages(preimgs).done(function (images) {
+        $("#loading").hide();
+        game.renderDom({
+          node: ".gamecon", //入口dom
+          getUrl: "getdata", //获取数字的接口
+          resClick: function (data) {
+            //点击结束后的回调函数  @data返回成功或失败
+            console.log(data);
+            var html =
+              '<p style="font-size:16px;text-align:center;">確定退出遊戲嗎？</p>';
+            mypop("提示", html, function (obj) {
+              obj.attr("disabled", true);
+              $.ajax({
+                type: "post",
+                data: data,
+                url: "getdata",
+                dataType: "json",
+                success: function (res) {
+                  obj.removeAttr("disabled");
+                  if (res.code == 0) {
+                    obj.parents(".ec_pop").hide();
+                    $(".pop_box").removeClass("animation-dialogue-in");
+                    $("body,html").removeClass("forbid-scroll");
+                    window.location.href = "http://www.baidu.com";
+                  } else {
+                    alert(res.msg);
+                  }
                 }
               });
             });
-          });
-        </script>
-      </body>
-    </html>
-  </head>
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
+</head>
+
 </html>
